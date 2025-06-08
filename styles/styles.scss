@@ -1,0 +1,7 @@
+@use "layout" as *;
+@use "spacing" as *;
+@use "typography" as *;
+
+body {
+    @include body;
+}
