@@ -9,9 +9,125 @@
   flex-direction: column;
 }
 
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple100: hsl(275, 100%, 97%);
+  --purple600: hsl(292, 16%, 49%);
+  --purple950: hsl(292, 42%, 14%);
+}
+
 body {
   height: 100vh;
   width: 23.438rem;
+  background-color: var(--purple100);
+  background-image: url(/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-attachment: scroll;
+  font-family: "Work Sans", sans-serif;
+  justify-self: center;
+  font-size: 1rem;
+  width: 23.438rem;
+}
+
+main {
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin-top: 9rem;
+}
+
+.accordion-container {
+  background-color: var(--white);
+  width: 21rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem 0.25rem;
+}
+
+.header {
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: var(--purple950);
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+summary {
+  list-style: none;
+  align-items: center;
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
+
+summary svg {
+  align-self: center;
+  margin-left: auto;
+}
+
+.summary-header {
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.063rem;
+  color: var(--purple950);
+}
+
+.summary-header span {
+  display: inline-flex;
+  align-self: center;
+}
+
+.icon-open {
+  display: none;
+}
+
+details[open] .icon-closed {
+  display: none;
+}
+
+details[open] .icon-open {
+  display: block;
+}
+
+p {
+  color: var(--purple600);
+  line-height: 1.5rem;
+  padding: 0 0 1.5rem;
+}
+
+hr {
+  display: block;
+  border: 0.05rem solid var(--purple100);
+}
+
+@media screen and (min-width: 48rem) {
+  body {
+    background-image: url(/images/background-pattern-desktop.svg);
+    width: auto;
+  }
+  .accordion-container {
+    margin-top: 4rem;
+    width: 36rem;
+  }
+  h2, .summary-header svg {
+    cursor: pointer;
+  }
+  h2:hover {
+    color: var(--purple600);
+    cursor: pointer;
+  }
+  .summary-header {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
