@@ -12,11 +12,6 @@
 body {
     @include body;
     background-color: var(--purple100);
-    background-image: url(/images/background-pattern-mobile.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top center;
-    background-attachment: scroll;
     font-family: "Work Sans", sans-serif;
     font-size: $fs-base;
     justify-self: center;
@@ -26,14 +21,16 @@ main {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    margin-top: 9rem;
+    position: relative;
 }
 
 .accordion-container {
     background-color: var(--white);
-    width: 21rem;
     border-radius: 0.5rem;
+    bottom: 15rem;
     padding: $sp-5 $sp-5 $sp-1;
+    position: absolute;
+    width: 21rem;
 }
 
 .header {
@@ -92,15 +89,13 @@ hr {
 }
 
 @media screen and (min-width: 48rem) {
-   body { background-image: url(/images/background-pattern-desktop.svg); width: auto; }
-    .accordion-container { margin-top: 4rem; width: 36rem; }
+   body { width: auto; }
+   
+   .accordion-container { margin-top: 4rem; width: 36rem; }
 
    h2, .summary-header svg { cursor: pointer; }
 
-   h2:hover {
-    color: var(--purple600);
-    cursor: pointer;
-   }
+   h2:hover { color: var(--purple600); cursor: pointer; }
 
    .summary-header { width: 100%; }
 }
