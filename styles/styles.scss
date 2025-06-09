@@ -27,7 +27,7 @@ main {
 .accordion-container {
     background-color: var(--white);
     border-radius: 0.5rem;
-    bottom: 15rem;
+    margin-block: 8rem;
     padding: $sp-5 $sp-5 $sp-1;
     position: absolute;
     width: 21rem;
@@ -37,7 +37,6 @@ main {
     align-items: center;
     flex-direction: row;
     gap: $sp-5;
-    margin-bottom: 0.5rem;
 }
 
 h1 { color: var(--purple950); }
@@ -46,16 +45,15 @@ h2 {
     font-weight: 600;
 }
 
+.star-icon {
+     width: 1.5rem;
+}
+
 summary {
     list-style: none;
     align-items: center;
     font-weight: 600;
     padding: $sp-5 $sp-0;
-}
-
-summary svg {
-    align-self: center;
-    margin-left: auto;
 }
 
 .summary-header {
@@ -66,10 +64,7 @@ summary svg {
     color: var(--purple950);
 }
 
-.summary-header span {
-    display: inline-flex;
-    align-self: center;
-}
+.summary-header span { display: inline-flex; }
 
 .icon-open { display: none; }
 
@@ -84,18 +79,30 @@ p {
 }
 
 hr {
-    display: block;
     border: 0.05rem solid var(--purple100);
+    display: block;
 }
 
 @media screen and (min-width: 48rem) {
    body { width: auto; }
    
-   .accordion-container { margin-top: 4rem; width: 36rem; }
+   .accordion-container {
+        margin-block: 11rem; 
+        padding: $sp-6 $sp-6 $sp-2;
+        width: 37.5rem;
+    }
+
+   header { margin-block: 0.5rem; }
+
+   h1 { font-size: 3rem; }
 
    h2, .summary-header svg { cursor: pointer; }
 
    h2:hover { color: var(--purple600); cursor: pointer; }
 
    .summary-header { width: 100%; }
+
+   .star-icon {
+        width: 2.25rem;
+    }
 }

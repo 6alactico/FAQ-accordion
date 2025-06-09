@@ -35,7 +35,7 @@ main {
 .accordion-container {
   background-color: var(--white);
   border-radius: 0.5rem;
-  bottom: 15rem;
+  margin-block: 8rem;
   padding: 1.5rem 1.5rem 0.25rem;
   position: absolute;
   width: 21rem;
@@ -45,7 +45,6 @@ main {
   align-items: center;
   flex-direction: row;
   gap: 1.5rem;
-  margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -57,16 +56,15 @@ h2 {
   font-weight: 600;
 }
 
+.star-icon {
+  width: 1.5rem;
+}
+
 summary {
   list-style: none;
   align-items: center;
   font-weight: 600;
   padding: 1.5rem 0;
-}
-
-summary svg {
-  align-self: center;
-  margin-left: auto;
 }
 
 .summary-header {
@@ -79,7 +77,6 @@ summary svg {
 
 .summary-header span {
   display: inline-flex;
-  align-self: center;
 }
 
 .icon-open {
@@ -101,8 +98,8 @@ p {
 }
 
 hr {
-  display: block;
   border: 0.05rem solid var(--purple100);
+  display: block;
 }
 
 @media screen and (min-width: 48rem) {
@@ -110,8 +107,15 @@ hr {
     width: auto;
   }
   .accordion-container {
-    margin-top: 4rem;
-    width: 36rem;
+    margin-block: 11rem;
+    padding: 2rem 2rem 0.5rem;
+    width: 37.5rem;
+  }
+  header {
+    margin-block: 0.5rem;
+  }
+  h1 {
+    font-size: 3rem;
   }
   h2, .summary-header svg {
     cursor: pointer;
@@ -122,6 +126,9 @@ hr {
   }
   .summary-header {
     width: 100%;
+  }
+  .star-icon {
+    width: 2.25rem;
   }
 }
 
