@@ -26,9 +26,8 @@ body {
   background-position: top center;
   background-attachment: scroll;
   font-family: "Work Sans", sans-serif;
-  justify-self: center;
   font-size: 1rem;
-  width: 23.438rem;
+  justify-self: center;
 }
 
 main {
